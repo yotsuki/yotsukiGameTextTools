@@ -3,18 +3,19 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{73F3E913-C289-4866-A1E9-A52925BB454E}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{E7CEF3A8-C2A0-4C08-BF22-870C32C3EF9D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>yotsuki.KIDSFansChannel.Script.RyuKoku</RootNamespace>
-    <AssemblyName>yotsuki.KIDSFansChannel.Script.RyuKoku</AssemblyName>
+    <RootNamespace>yotsuki.KIDSFansChannel.Script.Reader</RootNamespace>
+    <AssemblyName>Reader</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -28,7 +29,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -36,7 +36,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -57,13 +57,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RyukokuReader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonInterface\yotsuki.KIDSFansChannel.Common.Interface\yotsuki.KIDSFansChannel.Common.BaseClass.csproj">
-      <Project>{FB5C5431-6960-4D6F-B9DF-F0BDB22DB33F}</Project>
-      <Name>yotsuki.KIDSFansChannel.Common.BaseClass</Name>
+    <ProjectReference Include="..\yotsuki.free.Script.H2OPS2\yotsuki.free.Script.H2OPS2.csproj">
+      <Project>{F67D96B9-BA20-4726-B28B-BA8865AA9327}</Project>
+      <Name>yotsuki.free.Script.H2OPS2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.AgainPSP\yotsuki.KIDSFansChannel.Script.AgainPSP.csproj">
+      <Project>{C79DF975-2B49-4183-A818-1BAAD51C4790}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.AgainPSP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.Again\yotsuki.KIDSFansChannel.Script.Again.csproj">
+      <Project>{031E019E-E494-4F05-A788-4821411FEE6B}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.Again</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.ChaosHeadLoveChuChu\yotsuki.KIDSFansChannel.Script.ChaosHeadLoveChuChu.csproj">
+      <Project>{F59EB0B1-999E-4DB7-B718-D8C002AFF656}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.ChaosHeadLoveChuChu</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.ChaosHeadNoah\yotsuki.KIDSFansChannel.Script.ChaosHeadNoah.csproj">
+      <Project>{21A3E28C-B319-471C-9480-CB726E50E586}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.ChaosHeadNoah</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.MO6PS2\yotsuki.KIDSFansChannel.Script.MO6PS2.csproj">
+      <Project>{195000DB-508D-4C93-ADF7-D3E72CBFD240}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.MO6PS2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\yotsuki.KIDSFansChannel.Script.RyuKoku\yotsuki.KIDSFansChannel.Script.RyuKoku.csproj">
+      <Project>{73F3E913-C289-4866-A1E9-A52925BB454E}</Project>
+      <Name>yotsuki.KIDSFansChannel.Script.RyuKoku</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -72,15 +96,25 @@
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
+      <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

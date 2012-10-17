@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{031E019E-E494-4F05-A788-4821411FEE6B}</ProjectGuid>
+    <ProjectGuid>{195000DB-508D-4C93-ADF7-D3E72CBFD240}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>yotsuki.KIDSFansChannel.Script.Again</RootNamespace>
-    <AssemblyName>yotsuki.KIDSFansChannel.Script.Again</AssemblyName>
+    <RootNamespace>yotsuki.KIDSFansChannel.Script.MO6PS2</RootNamespace>
+    <AssemblyName>MO6PS2</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -58,14 +58,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgainReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\CommonInterface\yotsuki.KIDSFansChannel.Common.Interface\yotsuki.KIDSFansChannel.Common.BaseClass.csproj">
-      <Project>{FB5C5431-6960-4D6F-B9DF-F0BDB22DB33F}</Project>
-      <Name>yotsuki.KIDSFansChannel.Common.BaseClass</Name>
-    </ProjectReference>
+    <Compile Include="MO6PS2Reader.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
